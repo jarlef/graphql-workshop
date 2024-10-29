@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- xunit -->
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+        <PackageReference Include="coverlet.collector" Version="6.0.2">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="xunit" Version="2.9.2" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        
+        <!-- asp .net testing -->
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.10" />
+        
+        <!-- snapshoot testing -->
+        <PackageReference Include="Snapshooter.Xunit" Version="0.14.1" />
+        
+        <!-- graphql client -->
+        <PackageReference Include="StrawberryShake.Server" Version="14.0.0" />
+        
+        <!-- database container -->
+        <PackageReference Include="Testcontainers.MsSql" Version="3.10.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Using Include="Xunit" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Jukebox.Api\Jukebox.Api.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="__snapshots__\" />
+    </ItemGroup>
+
+    <Target Name="CopySchema" BeforeTargets="BeforeBuild">
+        <Exec Command="dotnet run -- schema export --output ../schema.graphql" WorkingDirectory="../Jukebox.Api" />
+       <Copy SourceFiles="../schema.graphql" DestinationFolder="$(ProjectDir)" SkipUnchangedFiles="true" />
+    </Target>
+</Project>

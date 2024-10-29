@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jukebox.Data", "Jukebox.Data\Jukebox.Data.csproj", "{151D9AD0-7DDE-40B0-A3BA-99A7E5443FFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jukebox.Api", "Jukebox.Api\Jukebox.Api.csproj", "{E1C1B3EA-E007-44F0-A9A2-07BB3362BB6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jukebox.Api.Tests", "Jukebox.Api.Tests\Jukebox.Api.Tests.csproj", "{6D7051FD-CDED-4CE8-B89C-F3B6316878A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{151D9AD0-7DDE-40B0-A3BA-99A7E5443FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{151D9AD0-7DDE-40B0-A3BA-99A7E5443FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{151D9AD0-7DDE-40B0-A3BA-99A7E5443FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{151D9AD0-7DDE-40B0-A3BA-99A7E5443FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1C1B3EA-E007-44F0-A9A2-07BB3362BB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1C1B3EA-E007-44F0-A9A2-07BB3362BB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1C1B3EA-E007-44F0-A9A2-07BB3362BB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1C1B3EA-E007-44F0-A9A2-07BB3362BB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D7051FD-CDED-4CE8-B89C-F3B6316878A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D7051FD-CDED-4CE8-B89C-F3B6316878A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D7051FD-CDED-4CE8-B89C-F3B6316878A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D7051FD-CDED-4CE8-B89C-F3B6316878A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

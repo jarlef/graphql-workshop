@@ -1,0 +1,17 @@
+fragment categoryDetails on Category {
+  id
+  name
+  #tracks {
+  #  id
+  #  name
+  #  duration
+  #  album {
+  #    id
+  #    title
+  #    artist {
+  #      id
+  #      name
+  #    }
+  #  }
+  #}
+}

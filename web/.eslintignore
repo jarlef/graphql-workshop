@@ -1,0 +1,4 @@
+
+# codegen
+src/generated/*
+src/**/*.gql.ts

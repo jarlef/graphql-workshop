@@ -1,0 +1,17 @@
+.categoryList {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.category {
+  height: 80px;
+  width: 300px;
+  padding: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}

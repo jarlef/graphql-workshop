@@ -1,0 +1,5 @@
+subscription UserUpdates($userId: Int!) {
+  userUpdated(userId: $userId) {
+    ...UserInfo
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prestart": "yarn codegen",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "lint": "oxlint -c ./oxlintrc.json src",
+    "serve": "vite preview",
+    "format": "prettier --write src",
+    "codegen": "graphql-codegen --config codegen.yml"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.3",
+    "@graphql-codegen/fragment-matcher": "5.0.2",
+    "@graphql-codegen/near-operation-file-preset": "^3.0.0",
+    "@graphql-codegen/typescript": "4.1.1",
+    "@graphql-codegen/typescript-apollo-client-helpers": "^3.0.0",
+    "@graphql-codegen/typescript-operations": "4.3.1",
+    "@graphql-codegen/typescript-react-apollo": "4.3.2",
+    "@types/node": "^22.8.1",
+    "@types/randomcolor": "^0.5.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "oxlint": "^0.10.3",
+    "prettier": "^3.3.3",
+    "sass": "^1.49.8",
+    "typescript": "^5.6.3",
+    "vite": "beta",
+    "vite-plugin-graphql-codegen": "^3.3.8",
+    "vite-tsconfig-paths": "^5.0.1"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.9",
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
+    "@fontsource/roboto": "^5.1.0",
+    "@mui/icons-material": "^6.1.5",
+    "@mui/material": "^6.1.5",
+    "framer-motion": "^11.11.10",
+    "graphql": "^16.3.0",
+    "graphql-ws": "^5.16.0",
+    "randomcolor": "^0.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
+    "react-use": "^17.3.2",
+    "styled-components": "^6.1.13",
+    "subscriptions-transport-ws": "^0.11.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead"
+    ],
+    "development": [
+      "last 1 chrome version"
+    ]
+  }
+}

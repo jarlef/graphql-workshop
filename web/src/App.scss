@@ -1,0 +1,46 @@
+.title {
+  flex: 1;
+  padding-top: 50px;
+  text-align: center;
+  position: relative;
+
+  .logo {
+    height: 140px !important;
+    width: 140px !important;
+    position: relative;
+    top: 20px;
+  }
+
+  span {
+    position: relative;
+    left: -40px;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.home {
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+main {
+  padding: 50px 200px;
+}
+
+.table {
+  tr {
+    &:last-child td,
+    &:last-child th {
+      border: 0;
+    }
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}

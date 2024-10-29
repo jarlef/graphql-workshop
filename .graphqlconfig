@@ -1,0 +1,11 @@
+{
+  "schema": "./schema.graphql",
+  "documents": "./web/src/**/*.graphql",
+  "extensions": {
+    "endpoints": {
+      "localhost": {
+        "url": "http://localhost:5000/graphql"
+      }
+    }
+  }
+}

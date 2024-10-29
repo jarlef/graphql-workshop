@@ -1,0 +1,46 @@
+overwrite: true
+schema: ../schema.graphql
+documents: src/**/*.graphql
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - add:
+          content: |
+            /* WARNING: This file is auto generated. DO NOT EDIT */
+      - typescript
+    config:
+      scalars:
+        DateTime: string | Date
+        UUID: string
+      avoidOptionals: true
+  src/:
+    preset: near-operation-file
+    presetConfig:
+      baseTypesPath: generated/graphql.ts
+      extension: .gql.ts
+    plugins:
+      - add:
+          content: |
+            /* WARNING: This file is auto generated. DO NOT EDIT */
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
+      avoidOptionals: true
+      apolloReactHooksImportFrom: '@apollo/client'
+      apolloReactCommonImportFrom: '@apollo/client'
+      scalars:
+        DateTime: string | Date
+        UUID: string
+  src/generated/introspection-result.ts:
+    plugins:
+      - add:
+          content: |
+            /* WARNING: This file is auto generated. DO NOT EDIT */
+      - fragment-matcher
+  src/generated/apollo-helpers.ts:
+    plugins:
+      - add:
+          content: |
+            /* WARNING: This file is auto generated. DO NOT EDIT */
+      - typescript-apollo-client-helpers
