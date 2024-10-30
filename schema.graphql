@@ -4,9 +4,21 @@ schema {
   subscription: JukeboxSubscription
 }
 
+type Album {
+  id: Int!
+  title: String!
+  artist: Artist @cost(weight: "10")
+}
+
+type Artist {
+  id: Int!
+  name: String!
+}
+
 type Category {
   id: Int!
   name: String
+  tracks: [Track!]! @cost(weight: "10")
 }
 
 type JukeboxMutation {
@@ -21,6 +33,13 @@ type JukeboxQuery {
 
 type JukeboxSubscription {
   userUpdated(userId: Int!): User!
+}
+
+type Track {
+  id: Int!
+  name: String!
+  duration: Int!
+  album: Album @cost(weight: "10")
 }
 
 type User {
