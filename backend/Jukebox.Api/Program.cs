@@ -30,8 +30,11 @@ builder
     .AddQueryType<JukeboxQuery>()
     .AddMutationType<JukeboxMutation>()
     .AddSubscriptionType<JukeboxSubscription>()
-    .ModifyOptions(x => x.DefaultBindingBehavior = BindingBehavior.Explicit)
-    .AddInMemorySubscriptions();
+    .ModifyOptions(x => x.DefaultBindingBehavior = BindingBehavior.Implicit)
+    .AddInMemorySubscriptions()
+    .AddProjections()
+    .AddFiltering()
+    .AddSorting();
 
 var app = builder.Build();
 
