@@ -1,11 +1,12 @@
 /// <reference types="vite" />
 
 import reactPlugin from '@vitejs/plugin-react';
+import codegen from 'vite-plugin-graphql-codegen';
 import tsconfigPathsPlugin from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 const config = () => ({
-  plugins: [tsconfigPathsPlugin(), reactPlugin()],
+  plugins: [tsconfigPathsPlugin(), reactPlugin(), codegen()],
   server: {
     port: 5173,
     proxy: {
