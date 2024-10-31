@@ -28,3 +28,4 @@
     - Add new review 
     - Vote for review
 
+3. The list of tracks under each category is quit long. Add paging to the tracks resolver
